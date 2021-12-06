@@ -1,0 +1,27 @@
+<div class="row">
+  <button class="btn btn-primary btn-round ml-3" (click)="addBook(addBookModal)">Add book</button>
+</div>
+<hr>
+<div class="row">
+  <div *ngFor="let book of books" class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i-feather name="book-open"></i-feather>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">{{book.title}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #addBookModal let-modal>
+  <app-new-book-modal [modal] = modal></app-new-book-modal>
+</ng-template>

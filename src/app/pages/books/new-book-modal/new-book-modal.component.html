@@ -1,0 +1,27 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Add book</h4>
+  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="formGroup">
+    <div class="form-group">
+      <label for="inputTitle">Title</label>
+      <input type="text" class="form-control" id="inputTitle" formControlName="title" maxlength="255"required>
+      <small *ngIf="shouldShowErrors('title')" class="form-text text-danger">
+        {{getErrorMessage("title")}}
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="textArea">Description</label>
+      <textarea class="form-control" rows="3" id="textArea" formControlName="description" maxlength="65535"></textarea>
+      <small *ngIf="shouldShowErrors('description')" class="form-text text-danger">
+        {{getErrorMessage("description")}}
+      </small>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="save()">Save</button>
+</div>

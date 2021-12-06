@@ -297,6 +297,13 @@ import {
   ZoomIn,
   ZoomOut
 } from 'angular-feather/icons';
+import { BooksComponent } from './pages/books/books.component';
+import { NewBookModalComponent } from './pages/books/new-book-modal/new-book-modal.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {BookService} from './shared/services/book.service';
+import {HttpClientModule} from '@angular/common/http';
+import { CustomerComponent } from './pages/customer/customer.component';
+import { CustomerModalComponent } from './pages/customer/customer-modal/customer-modal.component';
 
 const icons = {
   Camera,
@@ -586,9 +593,14 @@ const icons = {
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    BooksComponent,
+    NewBookModalComponent,
+    CustomerComponent,
+    CustomerModalComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserAnimationsModule,
     FeatherModule,
     FeatherModule.pick(icons),
@@ -599,9 +611,12 @@ const icons = {
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    BookService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
