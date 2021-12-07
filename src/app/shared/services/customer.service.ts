@@ -7,13 +7,17 @@ import {CustomerDTO} from '../model/customer-dto';
 @Injectable({
   providedIn: 'root'
 })
-export class BookService {
+export class CustomerService {
 
   private prefix = 'http://localhost:7200/api/v1';
 
   constructor(
     private readonly http: HttpClient
   ) { }
+
+  public getCustomers(): Observable<CustomerDTO[]> {
+    return this.http.get<CustomerDTO[]>(this.prefix + '/customers');
+  }
 
   public getCustomer(customerId: number): Observable<CustomerDTO> {
     return this.http.get<CustomerDTO>(this.prefix + '/customer/' + customerId);

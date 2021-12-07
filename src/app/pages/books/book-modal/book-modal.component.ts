@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-new-book-modal',
-  templateUrl: './new-book-modal.component.html',
-  styleUrls: ['./new-book-modal.component.css']
+  selector: 'app-book-modal',
+  templateUrl: './book-modal.component.html',
+  styleUrls: ['./book-modal.component.css']
 })
-export class NewBookModalComponent implements OnInit {
+export class BookModalComponent implements OnInit {
 
   @Input()
   modal: any;

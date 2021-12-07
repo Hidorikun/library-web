@@ -1,1 +1,39 @@
-<p>customer works!</p>
+<div class="row">
+  <button class="btn btn-primary btn-round ml-3" (click)="addCustomer(customerModal)">Add customer</button>
+</div>
+<hr>
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Customers</h4>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class=" text-primary">
+          <th>
+            First name
+          </th>
+          <th>
+            Last name
+          </th>
+          </thead>
+          <tbody>
+          <tr *ngFor="let customer of customers">
+            <td>
+              {{customer.firstName}}
+            </td>
+            <td>
+              {{customer.lastName}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #customerModal let-modal>
+  <app-customer-modal [modal]=modal></app-customer-modal>
+</ng-template>

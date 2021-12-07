@@ -298,7 +298,7 @@ import {
   ZoomOut
 } from 'angular-feather/icons';
 import { BooksComponent } from './pages/books/books.component';
-import { NewBookModalComponent } from './pages/books/new-book-modal/new-book-modal.component';
+import { BookModalComponent } from './pages/books/book-modal/book-modal.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BookService} from './shared/services/book.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -595,7 +595,7 @@ const icons = {
     AppComponent,
     AdminLayoutComponent,
     BooksComponent,
-    NewBookModalComponent,
+    BookModalComponent,
     CustomerComponent,
     CustomerModalComponent
   ],

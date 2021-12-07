@@ -9,11 +9,12 @@ import { MapsComponent } from '../../pages/maps/maps.component';
 import { NotificationsComponent } from '../../pages/notifications/notifications.component';
 import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
 import {BooksComponent} from '../../pages/books/books.component';
+import {CustomerComponent} from '../../pages/customer/customer.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'books',          component: BooksComponent },
     { path: 'dashboard',      component: DashboardComponent },
-    { path: 'customers',      component: UserComponent },
+    { path: 'customers',      component: CustomerComponent },
     { path: 'table',          component: TableComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
