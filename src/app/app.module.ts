@@ -299,11 +299,12 @@ import {
 } from 'angular-feather/icons';
 import { BooksComponent } from './pages/books/books.component';
 import { BookModalComponent } from './pages/books/book-modal/book-modal.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BookService} from './shared/services/book.service';
 import {HttpClientModule} from '@angular/common/http';
-import { CustomerComponent } from './pages/customer/customer.component';
+import { CustomerListComponent } from './pages/customer/customer-list.component';
 import { CustomerModalComponent } from './pages/customer/customer-modal/customer-modal.component';
+import { CustomerDetailsComponent } from './pages/customer/customer-details/customer-details.component';
 
 const icons = {
   Camera,
@@ -596,8 +597,10 @@ const icons = {
     AdminLayoutComponent,
     BooksComponent,
     BookModalComponent,
-    CustomerComponent,
-    CustomerModalComponent
+    CustomerListComponent,
+    CustomerDetailsComponent,
+    CustomerModalComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     HttpClientModule,
@@ -612,7 +615,8 @@ const icons = {
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     BookService

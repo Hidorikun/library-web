@@ -24,7 +24,7 @@ export class CustomerService {
   }
 
   public getBorrowedBooksForCustomer(customerId: number): Observable<BookDTO[]> {
-    return this.http.get<BookDTO[]>(this.prefix + '/customer/' + customerId + 'books');
+    return this.http.get<BookDTO[]>(this.prefix + '/customer/' + customerId + '/books');
   }
 
   public addCustomer(book: BookDTO): Observable<CustomerDTO> {

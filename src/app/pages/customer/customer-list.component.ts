@@ -1,18 +1,16 @@
 import {Component, OnDestroy, OnInit, TemplateRef} from '@angular/core';
-import {BookDTO} from '../../shared/model/book-dto';
 import {Subject} from 'rxjs';
 import {switchMap, takeUntil} from 'rxjs/operators';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {BookService} from '../../shared/services/book.service';
 import {CustomerService} from '../../shared/services/customer.service';
 import {CustomerDTO} from '../../shared/model/customer-dto';
 
 @Component({
-  selector: 'app-customer',
-  templateUrl: './customer.component.html',
-  styleUrls: ['./customer.component.css']
+  selector: 'app-customer-list',
+  templateUrl: './customer-list.component.html',
+  styleUrls: ['./customer-list.component.css']
 })
-export class CustomerComponent implements OnInit, OnDestroy {
+export class CustomerListComponent implements OnInit, OnDestroy {
 
   customers: CustomerDTO[];
 

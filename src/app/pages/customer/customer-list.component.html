@@ -19,7 +19,7 @@
           </th>
           </thead>
           <tbody>
-          <tr *ngFor="let customer of customers">
+          <tr *ngFor="let customer of customers" [routerLink]="['/customer', customer.id]">
             <td>
               {{customer.firstName}}
             </td>

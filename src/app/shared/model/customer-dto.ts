@@ -1,5 +1,5 @@
 export class CustomerDTO {
-  id: string;
-  firstName: number;
+  id: number;
+  firstName: string;
   lastName: string;
 }
